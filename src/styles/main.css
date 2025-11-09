@@ -1,21 +1,30 @@
+/* -------------------- */
+/*  ESTILOS GERAIS      */
+/* -------------------- */
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #e3f2fd;
-  color: #fff;
+  background-color: lightblue;
+  color: white;
 }
 
-.container {
+/* -------------------- */
+/*  CONTAINER PRINCIPAL */
+/* -------------------- */
+main {
   width: 780px;
   border-radius: 20px;
   padding: 35px 40px;
-  background-color: black;
+  background-color: darkblue;
 }
 
-.container header {
-  color: #b2b2b2;
+/* -------------------- */
+/*  CABEÇALHO           */
+/* -------------------- */
+main header {
+  color: silver;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,16 +45,22 @@ header .column span {
   font-size: 1.19rem;
 }
 
+/* -------------------- */
+/*  SLIDER DE VOLUME    */
+/* -------------------- */
 .volume-slider input {
-  accent-color: #fff;
+  accent-color: white;
 }
 
+/* -------------------- */
+/*  INTERRUPTOR DE TECLAS */
+/* -------------------- */
 .keys-check input {
   width: 60px;
   height: 30px;
   appearance: none;
   border-radius: 30px;
-  background-color: #4b4b4b;
+  background-color: dimgray;
   cursor: pointer;
   position: relative;
 }
@@ -54,7 +69,7 @@ header .column span {
   content: "";
   height: 20px;
   width: 20px;
-  background-color: #8c8c8c;
+  background-color: gray;
   top: 50%;
   left: 0.3rem;
   border-radius: inherit;
@@ -65,30 +80,36 @@ header .column span {
 
 .keys-check input:checked::before {
   left: 2.1rem;
-  background-color: #fff;
+  background-color: white;
 }
 
+/* -------------------- */
+/*  TECLAS DO PIANO     */
+/* -------------------- */
 .piano-keys {
   display: flex;
   margin-top: 40px;
 }
+
 .piano-keys .key {
   cursor: pointer;
   user-select: none;
   list-style: none;
-  color: #a2a2a2;
+  color: darkgray;
   position: relative;
   text-transform: uppercase;
 }
 
+/* Teclas brancas */
 .piano-keys .white {
   width: 70px;
   height: 230px;
   border: 1px solid black;
   border-radius: 8px;
-  background: linear-gradient(#fff 96%, #eee 4%);
+  background: linear-gradient(white 96%, gainsboro 4%);
 }
 
+/* Teclas pretas */
 .piano-keys .black {
   width: 44px;
   height: 140px;
@@ -96,9 +117,10 @@ header .column span {
   margin: 0 -22px 0 -22px;
   border: 1px solid black;
   border-radius: 0 0 5px 5px;
-  background: linear-gradient(#333, #000);
+  background: linear-gradient(dimgray, black);
 }
 
+/* Legendas das teclas */
 .piano-keys span {
   position: absolute;
   bottom: 20px;
@@ -107,16 +129,18 @@ header .column span {
   font-size: 1.13rem;
 }
 
+/* Efeitos ao pressionar teclas */
 .piano-keys .white.active {
   box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom #fff 0%, #eee 100%);
+  background: linear-gradient(to bottom, white 0%, gainsboro 100%);
 }
 
 .piano-keys .black.active {
   box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to bottom #000, #434343);
+  background: linear-gradient(to bottom, black, dimgrey);
 }
 
+/* Ocultar texto das teclas */
 .piano-keys .key.hide span {
   display: none;
 }
